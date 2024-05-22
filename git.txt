@@ -1,0 +1,10 @@
+
+
+SOFT DELETE COMMIT
+git reset --soft HEAD~1
+
+
+
+GET GIT DIFF IN COLORED FORMAT
+git diff --color > patch.txt
+cat patch.txt
