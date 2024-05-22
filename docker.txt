@@ -1,0 +1,8 @@
+
+
+ENTER DOCKER CONTAINER
+docker exec -it <container_name> bash
+
+
+PRINT DOCKER LOGS
+docker logs -f <container_name>
