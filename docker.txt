@@ -6,3 +6,23 @@ docker exec -it <container_name> bash
 
 PRINT DOCKER LOGS
 docker logs -f <container_name>
+
+
+docker ps
+docker ps -a
+
+
+
+
+CLEAN UP
+
+STOP CONTAINER
+docker stop $(docker ps -q)
+
+REMOVE CONTAINER
+docker rm $(docker ps -aq)
+
+
+docker system prune 
+docker image prune
+docker volume prune
