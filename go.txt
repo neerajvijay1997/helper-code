@@ -1,22 +1,21 @@
 
 
 
-POINTER
+POINTER funamentals
+https://www.geeksforgeeks.org/pointers-in-golang/
 https://medium.com/@jamal.kaksouri/a-comprehensive-guide-to-pointers-in-go-4acc58eb1f4d
 
 
 
 
 
-TODO: understand difference
+difference between pointer receiver and value reveiver
 
 Pointer Receiver:
-
 func (tc *TestCase) Validate() error {
 }
 
 
 Value Receiver:
-
 func (tc TestCase) Validate() error {
 }
