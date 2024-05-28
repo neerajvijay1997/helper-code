@@ -43,3 +43,15 @@ docker build -t cerc/secured-finance-watcher-ts:local -f ~/Dockerfile ~/secured-
 
 
 
+
+
+
+
+Why this?
+docker build -t cerc/secured-finance-watcher-ts:local -f ${SCRIPT_DIR}/Dockerfile ${build_command_args} ${CERC_REPO_BASE_DIR}/secured-finance-watcher-ts
+
+WORKDIR /app  (Similar to cd, all subsequent command executed form /app)
+COPY . .   (copy items from ${CERC_REPO_BASE_DIR}/secured-finance-watcher-ts build context to /app directory)
+
+
+
