@@ -1,0 +1,5 @@
+
+
+
+Make script file executable
+chmod +x build.sh
