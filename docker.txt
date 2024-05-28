@@ -26,3 +26,20 @@ docker rm $(docker ps -aq)
 docker system prune 
 docker image prune
 docker volume prune
+
+
+
+
+
+
+
+docker build -t cerc/secured-finance-watcher-ts:local -f ~/Dockerfile ~/secured-finance-watcher-ts
+
+-t flag > (name:tag format) (here local is tag)
+-f flag > location of Dockerfile for building image
+
+~/secured-finance-watcher-ts (imp positional argument) > BUILD CONTEXT > directory from which the Docker daemon will read the files to use during the image build process
+
+
+
+
