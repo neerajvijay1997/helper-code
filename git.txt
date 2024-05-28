@@ -5,6 +5,12 @@ git reset --soft HEAD~1
 
 
 
+
+ITERACTIVE REBASE
+git rebase --interactive bbc643cd~
+https://stackoverflow.com/questions/1186535/how-do-i-modify-a-specific-commit
+
+
 GET GIT DIFF IN COLORED FORMAT
 git diff --color > patch.txt
 cat patch.txt
