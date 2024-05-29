@@ -16,10 +16,10 @@ docker ps -a
 
 CLEAN UP
 
-STOP CONTAINER
+STOP ALL CONTAINER
 docker stop $(docker ps -q)
 
-REMOVE CONTAINER
+REMOVE ALL CONTAINER
 docker rm $(docker ps -aq)
 
 
@@ -27,6 +27,8 @@ docker system prune
 docker image prune
 docker volume prune
 
+REMOVE ALL DOCKER VOLUME
+docker volume rm $(docker volume ls -q)
 
 
 
