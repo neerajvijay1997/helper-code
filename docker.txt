@@ -33,7 +33,7 @@ docker volume rm $(docker volume ls -q)
 
 
 
-
+HOW TO SET BUILD CONTEXT WHEN CREATING IMAGE?
 
 docker build -t cerc/secured-finance-watcher-ts:local -f ~/Dockerfile ~/secured-finance-watcher-ts
 
@@ -43,11 +43,7 @@ docker build -t cerc/secured-finance-watcher-ts:local -f ~/Dockerfile ~/secured-
 ~/secured-finance-watcher-ts (imp positional argument) > BUILD CONTEXT > directory from which the Docker daemon will read the files to use during the image build process
 
 
-
-
-
-
-
+HOW TO USE BUILD CONTEXT
 
 Why this?
 docker build -t cerc/secured-finance-watcher-ts:local -f ${SCRIPT_DIR}/Dockerfile ${build_command_args} ${CERC_REPO_BASE_DIR}/secured-finance-watcher-ts
