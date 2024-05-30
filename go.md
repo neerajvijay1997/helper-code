@@ -1,6 +1,12 @@
 
 
 
+## Print go struct with fields
+```
+fmt.Printf("DEBUG %+v", info)
+```
+
+
 ## POINTER funamentals
 <https://www.geeksforgeeks.org/pointers-in-golang/>
 <https://medium.com/@jamal.kaksouri/a-comprehensive-guide-to-pointers-in-go-4acc58eb1f4d>
