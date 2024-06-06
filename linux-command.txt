@@ -12,7 +12,7 @@ tar -C temp/ -xzf  av_0.0.35_linux_x86_64.tar.gz
 Create file
 nano <filename>
 
-Rename directory
+Rename directory or file
 mv old_directory_name new_directory_name
 
 
