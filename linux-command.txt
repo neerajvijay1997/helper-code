@@ -4,6 +4,10 @@
 Make script file executable
 chmod +x build.sh
 
+execute script file
+./script.sh
+
+
 
 Extract tar file
 tar -C temp/ -xzf  av_0.0.35_linux_x86_64.tar.gz
