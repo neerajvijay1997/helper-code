@@ -12,6 +12,9 @@ https://stackoverflow.com/questions/1186535/how-do-i-modify-a-specific-commit
 
 
 
+git restore .
+
+
 
 
  git stash push -m "Add store"  durablestore.go   memstore.go  
@@ -22,3 +25,5 @@ https://stackoverflow.com/questions/1186535/how-do-i-modify-a-specific-commit
 GET GIT DIFF IN COLORED FORMAT
 git diff --color > patch.txt
 cat patch.txt
+
+
