@@ -27,3 +27,4 @@ git diff --color > patch.txt
 cat patch.txt
 
 
+git reflog
