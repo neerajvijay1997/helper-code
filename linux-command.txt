@@ -24,3 +24,7 @@ mv old_directory_name new_directory_name
 Check architecture of system (useful when downloading applicatuins)
 $ uname -m
 # x86_64
+
+
+source 
+https://www.geeksforgeeks.org/source-command-in-linux-with-examples/
