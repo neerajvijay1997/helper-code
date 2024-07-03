@@ -30,6 +30,8 @@ source
 https://www.geeksforgeeks.org/source-command-in-linux-with-examples/
 
 
+create directory if it does not exist
+mkdir -p log
 
 
 
