@@ -35,6 +35,9 @@ mkdir -p log
 
 
 
+redirect output and error to file
+command > output.log 2>&1
+
 
 
 Different shell environment variable
