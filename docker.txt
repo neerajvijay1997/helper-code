@@ -30,8 +30,8 @@ docker volume prune
 REMOVE ALL DOCKER VOLUME
 docker volume rm $(docker volume ls -q)
 
-
-
+REMOVE DOCKER IMAGES
+docker rmi -f7 <imageid1>  <imageid2> 
 
 HOW TO SET BUILD CONTEXT WHEN CREATING IMAGE?
 
