@@ -53,3 +53,7 @@ COPY . .   (copy items from ${CERC_REPO_BASE_DIR}/secured-finance-watcher-ts bui
 
 
 
+
+docker network
+https://docs.docker.com/network/
+
