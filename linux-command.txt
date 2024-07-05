@@ -29,6 +29,11 @@ $ uname -m
 source 
 https://www.geeksforgeeks.org/source-command-in-linux-with-examples/
 
+To update the path 
+source ./.bashrc 
+
+
+
 
 create directory if it does not exist
 mkdir -p log
