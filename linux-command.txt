@@ -91,3 +91,10 @@ https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH
 https://phoenixnap.com/kb/install-zsh-ubuntu
 https://askubuntu.com/questions/131823/how-to-make-zsh-the-default-shell
 
+
+
+
+see system architecture
+uname -m
+arch
+lscpu
