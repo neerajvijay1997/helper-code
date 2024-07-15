@@ -1,4 +1,9 @@
-
+install docker
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
+Install docker using apt repository (docker desktop is not required)
+https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
+To execute docker command without sudo
+https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user
 
 ENTER DOCKER CONTAINER
 docker exec -it <container_name> bash
