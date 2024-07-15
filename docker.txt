@@ -12,6 +12,10 @@ docker ps
 docker ps -a
 
 
+run the docker container from image
+docker run hello-world
+-it (Starts an interactive session with the container)
+
 
 
 CLEAN UP
