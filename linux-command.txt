@@ -52,3 +52,32 @@ export MY_ENV=hi (even child process gets the value)
 MY_ENV=hi (even child process does not gets the value)
 
 INLINE USAGE>> MY_ENV=hii some_command (set only for duration of command)
+
+
+
+
+
+
+
+
+Install ubutuntu
+
+Create bootable usb stick
+https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu#1-overview
+
+Ubuntu desktop install
+https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview
+
+install along windows
+https://linux.how2shout.com/install-ubuntu-22-04-jammy-alongside-windows-10-dual-boot/
+https://www.freecodecamp.org/news/how-to-dual-boot-windows-10-and-ubuntu-linux-dual-booting-tutorial/
+
+BIOS/UEFI settings: f2 to enter bios system
+Change the boot order to boot from the USB drive
+
+f12 : to select boot order
+
+update system
+sudo apt update
+sudo apt upgrade
+
