@@ -28,3 +28,19 @@ cat patch.txt
 
 
 git reflog
+
+
+
+
+
+install git
+https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu
+
+ssh connection for github
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh
+
+git config --global user.name "Your Name"
+git config --global user.email "youremail@domain.com"
+git config --list
+
