@@ -66,3 +66,15 @@ COPY . .   (copy items from ${CERC_REPO_BASE_DIR}/secured-finance-watcher-ts bui
 docker network
 https://docs.docker.com/network/
 
+
+
+
+
+To run the Docker container and then enter it to execute the pwd command
+docker run -it cerc/nitro-contracts:local /bin/bash
+Inside the container, run the command: pwd
+or 
+docker run -it cerc/nitro-contracts:local /bin/bash -c "pwd"
+
+
+
