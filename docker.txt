@@ -78,3 +78,13 @@ docker run -it cerc/nitro-contracts:local /bin/bash -c "pwd"
 
 
 
+
+
+
+Bind Mounts vs. Docker Volumes
+Bind mounts >> directly mount a host directory into your container.
+https://spacelift.io/blog/docker-volumes
+
+
+
+
