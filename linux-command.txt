@@ -100,3 +100,8 @@ see system architecture
 uname -m
 arch
 lscpu
+
+
+
+look into netcat commands (very useful)
+nc -vz localhost 3005
