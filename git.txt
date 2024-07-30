@@ -18,6 +18,8 @@ git restore .
 
 
  git stash push -m "Add store"  durablestore.go   memstore.go  
+git stash apply stash@{1}
+git stash pop stash@{1}
 
 
 
