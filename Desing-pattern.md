@@ -1,4 +1,16 @@
 
+
+
+
+Dependency injection
+tight vs loose coupling
+https://jefedcreator.medium.com/loose-coupling-via-dependency-injection-in-node-js-express-server-applications-a-performance-2c09a2d409ce
+
+
+
+
+
+
 Calling child from parent class
 
 In most object-oriented programming languages, a parent class cannot directly call a method defined in a child class because it does not have knowledge of the child class's methods. However, you can achieve this through several techniques:
