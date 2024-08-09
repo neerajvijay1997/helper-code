@@ -1,4 +1,71 @@
 
+## Publisher-Subscriber (Pub-Sub) architecture
+
+The Publisher-Subscriber (Pub-Sub) architecture is a messaging pattern where publishers send messages without needing to know who the subscribers are. Likewise, subscribers receive messages without needing to know who the publishers are. This pattern is widely used in systems where decoupling components is essential, allowing them to communicate without directly depending on each other.
+
+Key Concepts:
+Publisher: The component that generates and sends messages (or events).
+Subscriber: The component that listens for and processes messages from publishers.
+Message (Event): The data or information sent from the publisher to the subscriber.
+Topic (or Channel): A named entity to which messages are sent. Subscribers listen to specific topics to receive messages.
+
+```
+// Define types for Topic and Callback
+type Topic = string;
+type Callback = (data: any) => void;
+
+class PubSub {
+    private topics: Map<Topic, Callback[]>;
+
+    constructor() {
+        this.topics = new Map();
+    }
+
+    // Subscribe to a topic with a callback function
+    subscribe(topic: Topic, callback: Callback) {
+        if (!this.topics.has(topic)) {
+            this.topics.set(topic, []);
+        }
+        this.topics.get(topic)!.push(callback);
+    }
+
+    // Publish an event to a specific topic
+    publish(topic: Topic, data: any) {
+        const subscribers = this.topics.get(topic);
+        if (subscribers) {
+            subscribers.forEach(callback => callback(data));
+        }
+    }
+
+    // Unsubscribe from a topic
+    unsubscribe(topic: Topic, callback: Callback) {
+        const subscribers = this.topics.get(topic);
+        if (subscribers) {
+            this.topics.set(topic, subscribers.filter(sub => sub !== callback));
+        }
+    }
+}
+
+// Usage example
+
+const pubSub = new PubSub();
+
+// Define a subscriber callback function
+const subscriberCallback = (data: any) => {
+    console.log(`Subscriber received data: ${data}`);
+};
+
+// Subscribe to a topic
+pubSub.subscribe('news', subscriberCallback);
+
+// Publish an event to the 'news' topic
+pubSub.publish('news', 'Breaking News: Pub-Sub Pattern Explained!');
+
+// Output: Subscriber received data: Breaking News: Pub-Sub Pattern Explained!
+
+// Unsubscribe from the 'news' topic
+pubSub.unsubscribe('news', subscriberCallback);
+```
 
 
 
