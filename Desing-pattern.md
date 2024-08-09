@@ -1,4 +1,4 @@
-
+## event-driven architecture
 ## Publisher-Subscriber (Pub-Sub) architecture
 
 The Publisher-Subscriber (Pub-Sub) architecture is a messaging pattern where publishers send messages without needing to know who the subscribers are. Likewise, subscribers receive messages without needing to know who the publishers are. This pattern is widely used in systems where decoupling components is essential, allowing them to communicate without directly depending on each other.
