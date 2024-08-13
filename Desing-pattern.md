@@ -1,3 +1,17 @@
+## Pass by reference for objects (same for go and js)
+```
+obj := {A: 1}
+C := obj
+C.A = 2
+why it changes the obj ?
+```
+In the code you've shared, both obj and C refer to the same object in memory. When you do C := obj, you're not creating a new object; instead, you're making C a reference to the same object that obj refers to.
+
+So, when you modify C.A = 2, you're actually modifying the same object that obj refers to. That's why obj.A also becomes 2.
+
+This behavior occurs because objects are reference types in most programming languages. Assigning an object to another variable doesn't create a copy; it simply assigns the reference. If you want to create a separate, independent copy of the object, you would need to clone or copy it explicitly, depending on the language you're using.
+
+
 ## event-driven architecture
 ## Publisher-Subscriber (Pub-Sub) architecture
 
