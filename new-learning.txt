@@ -1,0 +1,5 @@
+
+
+Integrating wasm modules to js
+https://developer.mozilla.org/en-US/docs/WebAssembly
+https://wasmbyexample.dev/home.en-us.html
