@@ -94,6 +94,8 @@ https://phoenixnap.com/kb/install-zsh-ubuntu
 https://askubuntu.com/questions/131823/how-to-make-zsh-the-default-shell
 
 
+Make terminal to wait
+tail -f /dev/null
 
 
 see system architecture
