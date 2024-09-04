@@ -166,3 +166,49 @@ docker-compose-service1.yml and docker-compose-service2.yml: Each Compose file r
 Volume Creation: The volume shared-data is created once using docker volume create shared-data and can now be used by both services.
 
 
+
+
+
+once compose file create service in one netwrok 
+the other compose file create service in other network
+how will both service communicate?
+
+To enable communication between services defined in separate Docker Compose files that are on different networks, you need to connect the services to a common network. Here’s how you can do it:
+Create a Common Network: Create a Docker network that both services can share. This network should be defined outside of the Docker Compose files.
+```
+docker network create shared-network
+```
+Connect Services to the Common Network: Modify each Docker Compose file to connect the services to the shared-network. You can do this by adding the external network to each Compose file.
+```
+docker compose 1
+version: '3'
+services:
+  service-a:
+    image: my-service-a
+    networks:
+      - custom-network-a
+      - shared-network
+
+networks:
+  custom-network-a:
+    driver: bridge
+  shared-network:
+    external: true
+```
+```
+docker compose 2
+version: '3'
+services:
+  service-b:
+    image: my-service-b
+    networks:
+      - custom-network-b
+      - shared-network
+
+networks:
+  custom-network-b:
+    driver: bridge
+  shared-network:
+    external: true
+```
+Communicate Between Services: Services can now communicate using their service names on the shared-network. For example, service-a can reach service-b via the DNS name service-b on the shared-network.
