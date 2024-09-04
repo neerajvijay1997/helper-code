@@ -212,3 +212,11 @@ networks:
     external: true
 ```
 Communicate Between Services: Services can now communicate using their service names on the shared-network. For example, service-a can reach service-b via the DNS name service-b on the shared-network.
+
+
+
+
+how to get data from exited container???
+Run same container using same docker image and same docker volume
+
+
