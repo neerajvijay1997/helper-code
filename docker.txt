@@ -102,4 +102,67 @@ https://spacelift.io/blog/docker-volumes
 
 
 
+services in same docker compose file can share volume
+services defined in the same Docker Compose file can share volumes. This is useful for sharing data between containers. You can define a volume in the volumes section of your Docker Compose file and then reference it in multiple services
+```
+version: '3.9'
+
+services:
+  service1:
+    image: my-service1-image
+    volumes:
+      - shared-data:/app/data
+
+  service2:
+    image: my-service2-image
+    volumes:
+      - shared-data:/app/data
+
+volumes:
+  shared-data:
+```
+In this example:
+Both service1 and service2 use the shared-data volume, which is mounted at /app/data inside both containers.
+Any changes made by service1 to the files in /app/data will be accessible to service2, and vice versa.
+
+
+
+services in different Docker Compose files can share a volume, but there are a few additional steps involved
+To share a volume between services in different Compose files, you need to:
+Create the shared volume outside of the Compose files: This ensures that the volume is accessible to both Compose projects.
+Reference the external volume in each Compose file: Use the external option under volumes to tell Docker Compose that the volume is managed outside of the current Compose file.
+
+```
+Create the Shared Volume
+docker volume create shared-data
+
+docker compose 1
+version: '3.9'
+
+services:
+  service1:
+    image: my-service1-image
+    volumes:
+      - shared-data:/app/data
+
+volumes:
+  shared-data:
+    external: true
+
+docker compose 2
+version: '3.9'
+
+services:
+  service2:
+    image: my-service2-image
+    volumes:
+      - shared-data:/app/data
+
+volumes:
+  shared-data:
+    external: true
+```
+docker-compose-service1.yml and docker-compose-service2.yml: Each Compose file references the same shared-data volume, but the volume is marked as external. This tells Docker Compose not to create the volume but to use the existing one.
+Volume Creation: The volume shared-data is created once using docker volume create shared-data and can now be used by both services.
+
 
