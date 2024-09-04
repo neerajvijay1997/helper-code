@@ -78,6 +78,21 @@ docker run -it cerc/nitro-contracts:local /bin/bash -c "pwd"
 
 
 
+DOCKER NETWORK DEFAULT
+containers that are started simultaneously in a Docker Compose file share the same Docker network by default. Docker Compose automatically creates a default network for the services defined in the Compose file, allowing them to communicate with each other using their service names as hostnames
+```
+version: '3'
+services:
+  web:
+    image: nginx
+    ports:
+      - "8080:80"
+  db:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+```
+When you run docker-compose up, Docker Compose creates a network for your services. By default, this network is named based on the directory where the Compose file is located, with the suffix _default. All services in the Docker Compose file can communicate with each other over this network. You can reference other containers using their service names defined in the docker-compose.yml file. In this example, the web service can communicate with the db service using the hostname db.
 
 
 
